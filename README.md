@@ -57,7 +57,7 @@ Maven style (`pom.xml`):
   <dependency>
     <groupId>com.orange.common</groupId>
     <artifactId>spring-boot-autoconfigure-proxy</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
   </dependency>
   ...
 </dependencies>
