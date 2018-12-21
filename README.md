@@ -23,10 +23,9 @@ There are several caveats when managing network proxies in Java:
 Well, this Spring Boot auto-configurer is all about those 3 points.
 
 From the running context, it will try to discover and setup network proxy(ies) in the following way and order:
-1. *explicit proxies configuration from **Spring Boot configuration** (`yaml`, properties or else),
-2. implicit proxies configuration from `http_proxy`, `https_proxy`, `ftp_proxy` and `no_proxy` **environment variables**,
-3. implicit proxies configuration from non-standard `(http|https|ftp).proxyUser` and `(http|https|ftp).proxyPassword` 
-  **Java properties** (in addition to standard `(http|https|ftp).proxyHost`, `(http|https|ftp).proxyPort` and `(http|https|ftp).nonProxyHosts`),
+1. _explicit_ configuration from **Spring Boot configuration** (`yaml`, properties or else),
+2. _implicit_ configuration from **environment variables**,
+3. _implicit_ configuration from **Java properties**.
 
 <a name="usage"/>
 
