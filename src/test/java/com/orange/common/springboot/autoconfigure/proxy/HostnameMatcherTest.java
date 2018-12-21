@@ -55,7 +55,7 @@ public class HostnameMatcherTest {
 
     @Test
     public void parse_regex_matcher_should_work() {
-        assertThat(parse("\\.*\\.orange\\.com\\"))
+        assertThat(parse("/.*\\.orange\\.com/"))
                 .isInstanceOf(HostnameMatcher.PatternMatcher.class)
                 .extracting("pattern")
                 .extracting("pattern")

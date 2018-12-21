@@ -117,7 +117,7 @@ public class NetworkProxyAutoConfigurationTest {
                 "network.proxy.servers.0.host=INTRANET",
                 "network.proxy.servers.0.port=3128",
                 // faulty regex
-                "network.proxy.servers.0.for-hosts.0=\\+\\",
+                "network.proxy.servers.0.for-hosts.0=/+/",
                 "network.proxy.servers.0.for-hosts.1=*.intranet.fr",
                 "network.proxy.servers.0.for-hosts.2=some.host.on.intranet"
                 )
@@ -166,13 +166,13 @@ public class NetworkProxyAutoConfigurationTest {
 
                 "network.proxy.servers.0.host=INTRANET",
                 "network.proxy.servers.0.port=3128",
-                "network.proxy.servers.0.for-hosts.0=\\10\\.236\\.\\d+\\.\\d+\\",
+                "network.proxy.servers.0.for-hosts.0=/10\\.236\\.\\d+\\.\\d+/",
                 "network.proxy.servers.0.for-hosts.1=*.intranet.fr",
                 "network.proxy.servers.0.for-hosts.2=app.intranet",
 
                 "network.proxy.servers.1.host=INTERNET",
                 "network.proxy.servers.1.port=3128",
-                "network.proxy.servers.1.not-for-hosts.0=\\10\\.99\\.\\d+\\.\\d+\\",
+                "network.proxy.servers.1.not-for-hosts.0=/10\\.99\\.\\d+\\.\\d+/",
                 "network.proxy.servers.1.not-for-hosts.1=localhost",
                 "network.proxy.servers.1.not-for-hosts.2=127.0.0.1"
         )

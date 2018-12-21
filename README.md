@@ -131,7 +131,7 @@ network:
           # or wildcards
           - "*.intranet.acme.*"
           # or even regular expressions
-          - \10\.236\.\d+\.\d+\
+          - /10\.236\.\d+\.\d+/
 
       # 2: the internet proxy (requires an authentication)
       -
@@ -143,7 +143,7 @@ network:
         not-for-hosts:
           - localhost
           - 127.0.0.1
-          - \10\.99\.\d+\.\d+\
+          - /10\.99\.\d+\.\d+/
 ```
 
 When the application is trying to access a network resource, the URI hostname will be tested against every configured proxy

@@ -7,7 +7,7 @@ public abstract class HostnameMatcher {
     public abstract boolean matches(String hostname);
 
     public static HostnameMatcher parse(String matcher) {
-        if (matcher.startsWith("\\") && matcher.endsWith("\\")) {
+        if (matcher.startsWith("/") && matcher.endsWith("/")) {
             // the matcher is a regexp
             return new PatternMatcher(Pattern.compile(matcher.substring(1, matcher.length() - 1)));
         } else {
