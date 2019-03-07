@@ -136,7 +136,7 @@ network:
       -
         host: internet.proxy.acme.com
         port: 8080
-        user: pismy
+        username: pismy
         password: let.me.out
         # list of non-hostname matchers
         not-for-hosts:
