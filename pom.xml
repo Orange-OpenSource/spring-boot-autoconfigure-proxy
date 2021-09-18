@@ -4,7 +4,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.1.1.RELEASE</version>
+		<version>2.1.9.RELEASE</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.orange.common</groupId>
@@ -14,6 +14,7 @@
 	<description>Spring Boot AutoConfigure Proxy</description>
 
 	<properties>
+		<project.scm.id>github</project.scm.id>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version>1.8</java.version>
 	</properties>
@@ -29,17 +30,10 @@
 			<artifactId>spring-boot-starter</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>org.hibernate.validator</groupId>
-			<artifactId>hibernate-validator</artifactId>
-			<version>6.0.13.Final</version>
-			<scope>compile</scope>
-			<optional>true</optional>
+			<groupId>javax.validation</groupId>
+			<artifactId>validation-api</artifactId>
+			<version>2.0.1.Final</version>
 		</dependency>
-		<!--<dependency>-->
-			<!--<groupId>javax.validation</groupId>-->
-			<!--<artifactId>validation-api</artifactId>-->
-			<!--<version>2.0.0.Final</version>-->
-		<!--</dependency>-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-autoconfigure-processor</artifactId>
@@ -85,10 +79,16 @@
 
 	<distributionManagement>
 		<repository>
-			<id>bintray</id>
-			<url>https://api.bintray.com/maven/orange-opensource/maven/spring-boot-autoconfigure-proxy</url>
+		  <id>github</id>
+		  <name>GitHub Orange-OpenSource Apache Maven Packages</name>
+		  <url>https://maven.pkg.github.com/Orange-OpenSource/spring-boot-autoconfigure</url>
 		</repository>
-	</distributionManagement>
+		<snapshotRepository>
+			<id>github</id>
+			<name>GitHub Orange-OpenSource Apache Maven Packages</name>
+			<url>https://maven.pkg.github.com/Orange-OpenSource/spring-boot-autoconfigure</url>  
+		</snapshotRepository>
+	 </distributionManagement>
 
 	<licenses>
 		<license>
@@ -101,17 +101,6 @@
 		<name>Orange</name>
 		<url>http://www.orange.com</url>
 	</organization>
-
-	<developers>
-		<developer>
-			<id>pismy</id>
-			<name>Pierre Smeyers</name>
-			<email>pierre.smeyers@gmail.com</email>
-			<organization>Orange</organization>
-			<organizationUrl>http://www.orange.com</organizationUrl>
-			<url>https://github.com/pismy</url>
-		</developer>
-	</developers>
 
 	<profiles>
 		<profile>

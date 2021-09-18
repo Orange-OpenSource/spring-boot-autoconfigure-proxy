@@ -1,6 +1,6 @@
 # Spring Boot Auto Configure: Proxy
 [![Build Status](https://travis-ci.org/Orange-OpenSource/spring-boot-autoconfigure-proxy.svg?branch=master)](https://travis-ci.org/Orange-OpenSource/spring-boot-autoconfigure-proxy)
-[![Download](https://api.bintray.com/packages/orange-opensource/maven/spring-boot-autoconfigure-proxy/images/download.svg) ](https://bintray.com/orange-opensource/maven/spring-boot-autoconfigure-proxy/_latestVersion)
+<!-- [![Download](https://api.bintray.com/packages/orange-opensource/maven/spring-boot-autoconfigure-proxy/images/download.svg) ](https://bintray.com/orange-opensource/maven/spring-boot-autoconfigure-proxy/_latestVersion) -->
 
 This Spring Boot library provides network proxy auto-configuration.
 
@@ -38,10 +38,10 @@ Maven style (`pom.xml`):
 
 ```xml
 <repositories>
-  <!-- add the Orange bintray repository -->
+  <!-- add the Orange GitHub repository -->
   <repository>
-    <id>bintray-orange</id>
-    <url>http://dl.bintray.com/orange-opensource/maven</url>
+    <id>github-orange</id>
+    <url>https://maven.pkg.github.com/Orange-OpenSource/spring-boot-autoconfigure</url>
     <releases>
       <enabled>true</enabled>
     </releases>
@@ -56,7 +56,7 @@ Maven style (`pom.xml`):
   <dependency>
     <groupId>com.orange.common</groupId>
     <artifactId>spring-boot-autoconfigure-proxy</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
   </dependency>
   ...
 </dependencies>

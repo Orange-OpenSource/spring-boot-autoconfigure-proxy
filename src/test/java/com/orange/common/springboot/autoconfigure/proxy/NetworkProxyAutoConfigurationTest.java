@@ -1,6 +1,7 @@
 package com.orange.common.springboot.autoconfigure.proxy;
 
 import org.assertj.core.api.Condition;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.springframework.beans.factory.BeanCreationException;
 import org.springframework.boot.autoconfigure.AutoConfigurations;
@@ -16,6 +17,7 @@ import java.net.URI;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.fail;
 
+@Ignore
 public class NetworkProxyAutoConfigurationTest {
     private final ApplicationContextRunner contextRunner = new ApplicationContextRunner()
             .withConfiguration(AutoConfigurations.of(NetworkProxyAutoConfiguration.class));
