@@ -9,7 +9,7 @@
 	</parent>
 	<groupId>com.orange.common</groupId>
 	<artifactId>spring-boot-autoconfigure-proxy</artifactId>
-	<version>1.0.2-SNAPSHOT</version>
+	<version>1.0.2</version>
 	<name>spring-boot-autoconfigure-proxy</name>
 	<description>Spring Boot AutoConfigure Proxy</description>
 
@@ -74,7 +74,7 @@
 		<url>https://github.com/Orange-OpenSource/spring-boot-autoconfigure-proxy.git</url>
 		<connection>scm:git:https://github.com/Orange-OpenSource/spring-boot-autoconfigure-proxy.git</connection>
 		<developerConnection>scm:git:https://github.com/Orange-OpenSource/spring-boot-autoconfigure-proxy.git</developerConnection>
-		<tag>HEAD</tag>
+		<tag>spring-boot-autoconfigure-proxy-1.0.2</tag>
 	</scm>
 
 	<distributionManagement>
