@@ -41,7 +41,7 @@ Maven style (`pom.xml`):
   <!-- add the Orange GitHub repository -->
   <repository>
     <id>github-orange</id>
-    <url>https://maven.pkg.github.com/Orange-OpenSource/spring-boot-autoconfigure</url>
+    <url>https://maven.pkg.github.com/Orange-OpenSource/spring-boot-autoconfigure-proxy</url>
     <releases>
       <enabled>true</enabled>
     </releases>

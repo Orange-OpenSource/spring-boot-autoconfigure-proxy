@@ -9,7 +9,7 @@
 	</parent>
 	<groupId>com.orange.common</groupId>
 	<artifactId>spring-boot-autoconfigure-proxy</artifactId>
-	<version>1.0.3-SNAPSHOT</version>
+	<version>1.0.2</version>
 	<name>spring-boot-autoconfigure-proxy</name>
 	<description>Spring Boot AutoConfigure Proxy</description>
 
@@ -81,12 +81,12 @@
 		<repository>
 		  <id>github</id>
 		  <name>GitHub Orange-OpenSource Apache Maven Packages</name>
-		  <url>https://maven.pkg.github.com/Orange-OpenSource/spring-boot-autoconfigure</url>
+		  <url>https://maven.pkg.github.com/Orange-OpenSource/spring-boot-autoconfigure-proxy</url>
 		</repository>
 		<snapshotRepository>
 			<id>github</id>
 			<name>GitHub Orange-OpenSource Apache Maven Packages</name>
-			<url>https://maven.pkg.github.com/Orange-OpenSource/spring-boot-autoconfigure</url>  
+			<url>https://maven.pkg.github.com/Orange-OpenSource/spring-boot-autoconfigure-proxy</url>  
 		</snapshotRepository>
 	 </distributionManagement>
 
