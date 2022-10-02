@@ -39,7 +39,7 @@ public class NetworkProxyAutoConfiguration {
 
             // install proxy selector
             ProxySelector.setDefault(MultiProxySelector.build(properties.getServers(),
-                    properties.isAlwaysPrint()));
+                    properties.isAlwaysPrint(), properties.getExclusions()));
 
             // set password authentication for every proxy that need one
             for (NetworkProxyProperties.ProxyServerConfig cfg : properties.getServers()) {

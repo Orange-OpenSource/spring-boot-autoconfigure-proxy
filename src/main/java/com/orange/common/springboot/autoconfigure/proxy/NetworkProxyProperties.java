@@ -26,6 +26,13 @@ public class NetworkProxyProperties implements Validator  {
      */
     private boolean alwaysPrint = false;
 
+
+    /**
+     * Exclude logs for those hosts
+     */
+    private List<String> exclusions = Collections.emptyList();
+
+
     /**
      * Explicit network proxy servers configuration
      */
@@ -48,6 +55,14 @@ public class NetworkProxyProperties implements Validator  {
         this.servers = servers;
     }
 
+    public List<String> getExclusions() {
+        return exclusions;
+    }
+
+    public void setExclusions(List<String> exclusions) {
+        this.exclusions = exclusions;
+    }
+
     public boolean isAlwaysPrint() {
         return alwaysPrint;
     }
@@ -61,6 +76,7 @@ public class NetworkProxyProperties implements Validator  {
         return "NetworkProxyProperties{" +
                 "enabled=" + enabled +
                 ", alwaysPrint= " +alwaysPrint +
+                ", exclusions= " +exclusions +
                 ", servers=" + servers +
                 '}';
     }
