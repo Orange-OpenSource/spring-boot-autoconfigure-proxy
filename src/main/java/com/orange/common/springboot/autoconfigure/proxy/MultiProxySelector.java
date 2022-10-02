@@ -85,10 +85,13 @@ class MultiProxySelector extends ProxySelector {
 
     private final List<ProxyEntry> proxies;
 
+    private final boolean alwaysPrint;
+
     private Map<SchemeAndHost, List<Proxy>> hostname2Proxies = new HashMap<>();
 
-    private MultiProxySelector(List<ProxyEntry> proxies) {
+    private MultiProxySelector(List<ProxyEntry> proxies, boolean alwaysPrint) {
         this.proxies = proxies;
+        this.alwaysPrint = alwaysPrint;
     }
 
     @Override
@@ -126,7 +129,13 @@ class MultiProxySelector extends ProxySelector {
             throw new IllegalArgumentException("protocol = " + protocol + " host = " + host);
         }
 
-        return hostname2Proxies.computeIfAbsent(new SchemeAndHost(protocol, host), this::doGetProxies);
+        SchemeAndHost schemeAndHost = new SchemeAndHost(protocol, host);
+        List<Proxy> proxiesList =
+                hostname2Proxies.computeIfAbsent(schemeAndHost, this::doGetProxies);
+        if (alwaysPrint) {
+            LOGGER.info("Proxies for [{}] : {}", schemeAndHost, proxiesList);
+        }
+        return proxiesList;
     }
 
     private List<Proxy> doGetProxies(SchemeAndHost schemeAndHost) {
@@ -151,7 +160,8 @@ class MultiProxySelector extends ProxySelector {
                 '}';
     }
 
-    static MultiProxySelector build(List<NetworkProxyProperties.ProxyServerConfig> proxies) {
+    static MultiProxySelector build(List<NetworkProxyProperties.ProxyServerConfig> proxies,
+                                    boolean alwaysPrint) {
         List<ProxyEntry> proxyEntries = new ArrayList<>();
         for (int i = 0; i < proxies.size(); i++) {
             NetworkProxyProperties.ProxyServerConfig cfg = proxies.get(i);
@@ -190,6 +200,6 @@ class MultiProxySelector extends ProxySelector {
             proxyEntries.add(new ProxyEntry(cfg, proxy, positiveMatchers, negativeMatchers));
         }
 
-        return new MultiProxySelector(proxyEntries);
+        return new MultiProxySelector(proxyEntries, alwaysPrint);
     }
 }
