@@ -114,6 +114,7 @@ Here is a configuration example with a proxy for intranet addresses, and another
 network:
   proxy:
     enable: true # allows disabling auto-config; enabled by default
+    alwaysPrint: false #allow the info log showing the proxy used every time a call is made
 
     # explicit list of proxy servers with settings
     servers:

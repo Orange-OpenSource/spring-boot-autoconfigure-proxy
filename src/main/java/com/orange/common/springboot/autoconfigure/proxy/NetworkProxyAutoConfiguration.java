@@ -38,7 +38,8 @@ public class NetworkProxyAutoConfiguration {
             LOGGER.info("Configuring proxies from Spring Boot configuration");
 
             // install proxy selector
-            ProxySelector.setDefault(MultiProxySelector.build(properties.getServers()));
+            ProxySelector.setDefault(MultiProxySelector.build(properties.getServers(),
+                    properties.isAlwaysPrint()));
 
             // set password authentication for every proxy that need one
             for (NetworkProxyProperties.ProxyServerConfig cfg : properties.getServers()) {
