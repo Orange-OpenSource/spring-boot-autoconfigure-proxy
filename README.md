@@ -115,6 +115,10 @@ network:
   proxy:
     enable: true # allows disabling auto-config; enabled by default
 
+    alwaysPrint: false #allow the info log showing the proxy used every time a call is made
+
+    exclusions: []# remove log for this hosts while alwaysprint is enabled
+
     # explicit list of proxy servers with settings
     servers:
       # 1: the intranet proxy (doesn't require any authentication)
